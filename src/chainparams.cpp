@@ -364,7 +364,7 @@ public:
         nDefaultPort = 19994;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1531651724, 890018979, 0x207fffff, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1531651724, 890018979, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0x000001a50e1419b7ad7bf403697a1226015eb3e887983c5c05f61d60b31ec876"));
         assert(genesis.hashMerkleRoot == uint256S("0x3af54bb1543f7e19adb1f8e72c37042655c171aa0a0ca21110aff2b47861c4bc"));
@@ -382,7 +382,7 @@ public:
 
         checkpointData = (CCheckpointData){
             boost::assign::map_list_of
-            ( 0, uint256S("0x5067c79dd74aeb5a9ba2bba71459267196e5bba7db027ade5572b2cdae6c7a08")),
+            ( 0, uint256S("0x000001a50e1419b7ad7bf403697a1226015eb3e887983c5c05f61d60b31ec876")),
             0,
             0,
             0
