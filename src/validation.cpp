@@ -1230,66 +1230,66 @@ NOTE:   unlike bitcoin we are using PREVIOUS block height here,
 */
 CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params& consensusParams, bool fSuperblockPartOnly)
 {
-    CAmount nSubsidyBase = 4;
+    CAmount nSubsidyBase = 0;
 
     int nCurrentHeight = nPrevHeight + 1;
 
-    if (nCurrentHeight <= 6) {
-        nSubsidyBase = 10000;
+    if (nCurrentHeight <= 100) {
+        nSubsidyBase = 500000000;
     }
     else if (nCurrentHeight == 1440) { // day 1
-        nSubsidyBase = 1000;
+        nSubsidyBase = 0000;
     }
     else if (nCurrentHeight == 2880) {
-        nSubsidyBase = 1000;
+        nSubsidyBase = 0000;
     }
     else if (nCurrentHeight == 4320) {
-        nSubsidyBase = 1000;
+        nSubsidyBase = 0000;
     }
     else if (nCurrentHeight == 5760) {
-        nSubsidyBase = 1000;
+        nSubsidyBase = 0000;
     }
     else if (nCurrentHeight == 7200) {
-        nSubsidyBase = 1000;
+        nSubsidyBase = 0000;
     }
     else if (nCurrentHeight == 8640) {
-        nSubsidyBase = 1000;
+        nSubsidyBase = 0000;
     }
     else if (nCurrentHeight == 10080) { // day 7
-        nSubsidyBase = 1000;
+        nSubsidyBase = 0000;
     }
     else if (nCurrentHeight == 20160) { // week 2
-        nSubsidyBase = 1000;
+        nSubsidyBase = 0000;
     }
     else if (nCurrentHeight == 30240) { // week 3
-        nSubsidyBase = 1000;
+        nSubsidyBase = 0000;
     }
     else if (nCurrentHeight == 40320) { // week 4 (day 28)
-        nSubsidyBase = 1000;
+        nSubsidyBase = 0000;
     }
     else if (nCurrentHeight == 80640) { // month 2 (day 56)
-        nSubsidyBase = 1000;
+        nSubsidyBase = 0000;
     }
     else if (nCurrentHeight == 120960) { // month 3 (day 84)
-        nSubsidyBase = 1000;
+        nSubsidyBase = 0000;
     }
     else if (nCurrentHeight == 161280) { // month 4 (day 112)
-        nSubsidyBase = 1000;
+        nSubsidyBase = 0000;
     }
     else if (nCurrentHeight == 201600) { // month 5 (day 140)
-        nSubsidyBase = 1000;
+        nSubsidyBase = 0000;
     }
     else if (nCurrentHeight == 241920) { // month 6 (day 168)
-        nSubsidyBase = 1000;
+        nSubsidyBase = 0000;
     }
     else if (nCurrentHeight == 483840) { // year 1 (day 336)
-        nSubsidyBase = 1000;
+        nSubsidyBase = 0000;
     }
     else if (nCurrentHeight == 967680) { // year 2 (day 672)
-        nSubsidyBase = 1000;
+        nSubsidyBase = 0000;
     }
     else if (nCurrentHeight == 1451520) { // year 3 (day 1008)
-        nSubsidyBase = 1000;
+        nSubsidyBase = 0000;
     }
 
     // LogPrintf("height %u diff %4.2f reward %d\n", nPrevHeight, dDiff, nSubsidyBase);
